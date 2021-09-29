@@ -72,6 +72,7 @@ public class Worker {
 	}
 	
 	public Double income(int year, int month) {
+		
 		double sum = baseSalary;
 		
 		Calendar cal = Calendar.getInstance();
