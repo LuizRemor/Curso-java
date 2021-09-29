@@ -2,6 +2,8 @@ package entities.enums;
 
 public enum Status {
 	
+	PENDING_PAYMENT,
 	PROCESSING,
-	CONCLUDED;
+	SHIPPED,
+	DELIVERED;
 }

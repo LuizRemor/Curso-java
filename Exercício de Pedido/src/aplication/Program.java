@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import entities.Products;
-import entities.HourContract;
+import entities.Pedido;
 import entities.Client;
 import entities.enums.Status;
 
