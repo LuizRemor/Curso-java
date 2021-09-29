@@ -6,8 +6,6 @@ public class EnvioRoubado {
 		
 		System.out.println("O vini é viado");
 		
-		
-
 	}
 
 }
