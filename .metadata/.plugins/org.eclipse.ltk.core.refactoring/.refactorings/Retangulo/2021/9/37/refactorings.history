@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;entities.triangulo&apos; to &apos;retangulo&apos;&#x0D;&#x0A;- Original project: &apos;Retangulo&apos;&#x0D;&#x0A;- Original element: &apos;entities.triangulo&apos;&#x0D;&#x0A;- Renamed element: &apos;entities.retangulo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;triangulo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;entities{triangulo.java[triangulo" matchStrategy="1" name="retangulo" qualified="false" references="true" similarDeclarations="false" stamp="1630957463527" textual="false" version="1.0"/>
+</session>

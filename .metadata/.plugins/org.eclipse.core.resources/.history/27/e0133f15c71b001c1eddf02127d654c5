@@ -1,0 +1,39 @@
+package Davi;
+
+import java.util.ArrayList;
+
+public class Exemplo {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> lista = new ArrayList<>();
+
+		lista.add("Luiz");
+		lista.add("André");
+		lista.add("Michael");
+
+		System.out.println("=============================");
+
+		for (String item : lista) {
+
+			System.out.println(item);
+
+		}
+
+		System.out.println("=============================");
+		System.out.println("Só quem começa com A");
+		System.out.println("=============================");
+
+		for (String item : lista) {
+
+			if (item.startsWith("A")) {
+
+				System.out.println(item);
+
+			}
+
+		}
+
+	}
+
+}

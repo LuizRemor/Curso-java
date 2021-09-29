@@ -1,0 +1,70 @@
+package Program;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Funcionario.Funcionario;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<Funcionario> list = new ArrayList<>();
+		
+		System.out.println("Cadastramos 3 funcionarios");
+		Integer n = 3;
+		
+		for(int i=1;i<=n;i++) {
+			System.out.printf("Funcionário #%d", i);
+			Integer id = i;
+			System.out.println();
+			
+			System.out.printf("Id: %d", id);
+			System.out.println();
+			
+			System.out.println("Qual o nome do Funcionário?");
+			String nome = sc.nextLine();
+			
+			System.out.println("Qual o salário do Funcionário?");
+			Double salario = sc.nextDouble();
+			
+			System.out.println();
+			
+			list.add(new Funcionario(id, nome, salario));
+			sc.nextLine();
+		}
+		
+		System.out.println("Qual o Id do funcionário que vamos aumentar o salário?");
+		Integer id = sc.nextInt();
+		
+		if(list.contains(id)) {
+			System.out.println("Qual o percentual de aumento?");
+			Integer perc = sc.nextInt();
+			list.get(id).aumentaSalario(perc);
+		}
+		
+		Funcionario func = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+		
+		if (func == null) {
+			System.out.println("Este Id não existe");
+		}
+		else {
+			System.out.println("Qual o percentual de aumento?");
+			Double perc = sc.nextDouble();
+			func.aumentaSalario(perc);
+		}
+
+		System.out.println();
+		
+		System.out.println("Lista de funcionários:");
+		for(Funcionario obj : list) {
+			System.out.println(obj);
+		}
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,93 @@
+package Program;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Matriz.Matriz;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<Matriz> list = new ArrayList<>();
+		
+		System.out.println("Cadastramos 3 funcionarios");
+		Integer n = 3;
+		
+		for(int i=1;i<=n;i++) {
+			System.out.printf("Funcionário #%d", i);
+			Integer id = i;
+			System.out.println();
+			
+			System.out.printf("Id: %d", id);
+			System.out.println();
+			
+			System.out.println("Qual o nome do Funcionário?");
+			String nome = sc.nextLine();
+			
+			System.out.println("Qual o salário do Funcionário?");
+			Double salario = sc.nextDouble();
+			
+			System.out.println();
+			
+			list.add(new Matriz(id, nome, salario));
+			sc.nextLine();
+		}
+		
+		System.out.println("Qual o Id do funcionário que vamos aumentar o salário?");
+		Integer id = sc.nextInt();
+		
+		if(validaId(id, list)) {
+			System.out.println("Qual o percentual de aumento?");
+			Integer perc = sc.nextInt();
+			list.get(buscaId(id, list)).aumentaSalario(perc);
+		}
+		else {
+			System.out.println("Este id não existe!!");
+		}
+		
+		/*Funcionario func = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+		
+		if (func == null) {
+			System.out.println("Este Id não existe");
+		}
+		else {
+			System.out.println("Qual o percentual de aumento?");
+			Double perc = sc.nextDouble();
+			func.aumentaSalario(perc);
+		}*/
+
+		System.out.println();
+		
+		System.out.println("Lista de funcionários:");
+		for(Matriz obj : list) {
+			System.out.println(obj);
+		}
+		
+		sc.close();
+	}
+	
+	public static Boolean validaId(Integer id, List<Matriz> list) {
+		for (Matriz funcionario : list) {
+			if(funcionario.getId() == id) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public static Integer  buscaId(Integer id, List<Matriz> list) {
+		Integer posicao = 0;
+		
+		for (Matriz funcionario : list) {
+			if(funcionario.getId() == id) {
+				return posicao;
+			}
+			posicao = posicao + 1;
+		}
+		
+		return -1;
+	}
+}
