@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="price"/>
 		<list key="findhistory">
+			<item value="value"/>
 			<item value="new ArrayList()"/>
 			<item value="List&lt;"/>
 			<item value="nomes"/>
@@ -20,6 +21,7 @@
 			<item value="System.out.println(&quot;Quais as medidas do triângulo X? &quot;);"/>
 		</list>
 		<list key="replacehistory">
+			<item value="price"/>
 			<item value=""/>
 			<item value="nome"/>
 		</list>

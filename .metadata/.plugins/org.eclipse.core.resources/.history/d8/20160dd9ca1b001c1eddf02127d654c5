@@ -1,7 +1,0 @@
-package entidade;
-
-public class Carteira {
-	
-	private List<Cliente> clientes;
-
-}
