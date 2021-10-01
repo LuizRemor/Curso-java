@@ -1,7 +1,6 @@
 package aplication;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -21,16 +20,10 @@ public class Program {
 		
 		Order item = new Order();
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		
 		System.out.println("Entre com os dados do cliente:");
 		System.out.println("Nome:");
-		String nome = "Luiz";
 		System.out.println("E-mail:");
-		String email = "luiz@gmail.com";
 		System.out.println("Data de Nascimento:");
-		Date birth = sdf.parse("09/04/1997");
-		
 		System.out.println("Entre com os dados do pedido:");
 		System.out.println("Status: " + OrderStatus.PROCESSING);
 		

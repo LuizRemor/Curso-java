@@ -18,7 +18,8 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		List<Product> list = new ArrayList<>();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");;
+	
 		
 		int n = 3;
 		
@@ -31,9 +32,9 @@ public class Program {
 			
 			System.out.println("Comum, usado ou importado? (c/u/i)");
 			char tipo = sc.next().charAt(0);
+			
 			System.out.println("Qual o nome do produto?");
-			String name = sc.nextLine();
-			sc.next();
+			String name = sc.next();
 			
 			System.out.println("Qual o preço do produto?");
 			Double price = sc.nextDouble();
@@ -55,7 +56,6 @@ public class Program {
 				list.add(new ImportedProduct(name, price, costomsFee));
 			}
 			
-			list.add(new Product(name, price));
 		}
 		
 		System.out.println();

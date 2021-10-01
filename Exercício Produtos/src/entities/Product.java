@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Product {
 	
-	private String name;
+	protected String name;
 	protected Double price;
 	
 	Scanner sc = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class Product {
 	}
 	
 	public String priceTag() {
-		return name
+		return this.name
 			   + " $ "
 			   + String.format("%.2f", price);
 	}

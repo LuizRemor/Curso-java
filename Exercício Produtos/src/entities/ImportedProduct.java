@@ -27,10 +27,10 @@ public class ImportedProduct extends Product{
 		
 		return price += costomsFee;
 	}
-	
+
 	@Override
 	public String priceTag() {
-		return getName()
+		return this.name
 			   + " $ "
 			   + String.format("%.2f", totalPrice())
 			   + "(Customs fee: $"
