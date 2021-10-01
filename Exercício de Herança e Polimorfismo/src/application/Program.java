@@ -1,4 +1,5 @@
 package application;
+//teste
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,7 @@ public class Program {
 			System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
 		}
 		
+		sc.close();		
 	}
 
 }
