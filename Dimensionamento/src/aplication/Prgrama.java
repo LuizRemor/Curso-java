@@ -85,6 +85,7 @@ public class Prgrama {
 		System.out.println();
 		
 		System.out.printf("Espaçamento = %.2fcm", calc.espacamento());
+		//System.out.println(calc.espacamentoCalc());
 		
 		sc.close();
 	}

@@ -1,3 +1,8 @@
+//PROBLEMAS:
+//INCLUIR O DOMÍNIO 4
+//O ESPACAMENTO TÁ COM BUG, O ESPACAMENTO CALCULADO TÁ DANDO 0
+//A DESCISÃO DO DOMÍNIO 4 TÁ COM BUG
+
 package entities;
 
 import java.util.Scanner;
@@ -104,17 +109,25 @@ public class Calculos {
 		if (X()> 0 && X() < x23 ) {
 			return "A viga está no Domínio I";
 		} else if (X() > x23 && X() < x34) {
+			System.out.println("x23 = " + x23);
+			System.out.println("x34 = " + x34);
 			return "A viga está no Domínio III";
 		}
 		else if(X() > x34 &&  X() < (d-d*0.05)) {
+			System.out.println("x23 = " + x23);
+			System.out.println("x34 = " + x34);
 			return "A viga está no Domínio III";
 		}
 		else if (X() > (d-d*0.05) && X() < h){
 			dominio = 4;
+			System.out.println("x23 = " + x23);
+			System.out.println("x34 = " + x34);
 			return "A viga está no Domínio IV";
 		}
 		else {
 			dominio = 4;
+			System.out.println("x23 = " + x23);
+			System.out.println("x34 = " + x34);
 			return "A viga está no Domínio V";
 		}
 	}
@@ -163,6 +176,9 @@ public class Calculos {
 	}
 
 //QUANTIDADE DE BARRAS DE AÇO MÁXIMO
+	
+	Double qtdBarras = 0.0;
+	
 	public double quantBarrasAco() {
 
 		double diametro;
@@ -187,14 +203,14 @@ public class Calculos {
 		diametro = sc.nextDouble();
 
 		if (diametro == 1) {
-			return Math.ceil(areaDeAco() / 0.5);
+			return qtdBarras =  Math.ceil(areaDeAco() / 0.5);
 		} else if (diametro == 2) {
-			return Math.ceil(areaDeAco() / 0.78);
+			return qtdBarras = Math.ceil(areaDeAco() / 0.78);
 		} else if (diametro == 3) {
-			return Math.ceil(areaDeAco() / 1.23);
+			return qtdBarras = Math.ceil(areaDeAco() / 1.23);
 		}
 		else {
-			return Math.ceil(areaDeAco() / 2);
+			return qtdBarras = Math.ceil(areaDeAco() / 2);
 		}
 	}
 
@@ -225,7 +241,7 @@ public class Calculos {
 	
 //ESPAÇAMENTO CALCULADO
 	public double espacamentoCalc() {
-		return espacamentoCalc = bw - quantBarrasAco() * diametro - 2 * c;
+		return espacamentoCalc = (bw - (qtdBarras * diametro) - (2 * c))/(qtdBarras-1);
 	}
 
 //DECISÃO DE ESPAÇAMENTO

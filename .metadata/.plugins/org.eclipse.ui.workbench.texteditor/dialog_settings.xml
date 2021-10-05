@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="list"/>
+		<item key="selection" value="limiteSaque"/>
 		<list key="findhistory">
+			<item value="withDrawLimite"/>
+			<item value="balance"/>
 			<item value="itemProd"/>
 			<item value="value"/>
 			<item value="new ArrayList()"/>
@@ -22,6 +24,8 @@
 			<item value="System.out.println(&quot;Quais as medidas do triângulo X? &quot;);"/>
 		</list>
 		<list key="replacehistory">
+			<item value="limiteSaque"/>
+			<item value="saldo"/>
 			<item value="list"/>
 			<item value="price"/>
 			<item value=""/>
