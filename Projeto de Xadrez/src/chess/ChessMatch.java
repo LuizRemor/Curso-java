@@ -33,7 +33,12 @@ public class ChessMatch {
 		return (ChessPiece)capturedPiece;
 	}
 	
-	//INCLUIR AQUI A FUNÇÃO makeMove();
+	public Piece makeMove(Position source, Position target) {
+		Piece p = board.removePiece(source);
+		Piece capturedPiece = board.removePiece(target);
+		board.placePiece(p, target);
+		return capturedPiece;
+	}
 	
 	private void ValidateSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
